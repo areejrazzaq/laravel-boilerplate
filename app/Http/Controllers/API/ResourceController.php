@@ -14,7 +14,7 @@ class ResourceController extends AppBaseController
      */
     public function index()
     {
-        return $this->sendSuccess('Index function is calleed');
+        return $this->sendSuccess('Index function is called');
     }
     
     /**
@@ -28,7 +28,7 @@ class ResourceController extends AppBaseController
      */
     public function store(AddResourceRequest $request)
     {
-        return $this->sendSuccess('Store function is calleed');
+        return $this->sendSuccess('Store function is called');
     }
     
     /**
@@ -38,7 +38,7 @@ class ResourceController extends AppBaseController
      */
     public function show(string $id)
     {
-        return $this->sendSuccess('Show function is calleed');
+        return $this->sendSuccess('Show function is called');
     }
 
     /**
@@ -53,7 +53,7 @@ class ResourceController extends AppBaseController
      */
     public function update(UpdateResourceRequest $request, string $id)
     {
-        return $this->sendSuccess('Update function is calleed');
+        return $this->sendSuccess('Update function is called');
     }
     
     /**
