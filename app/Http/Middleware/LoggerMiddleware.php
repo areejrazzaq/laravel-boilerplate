@@ -11,6 +11,7 @@ class LoggerMiddleware
 {
     /**
      * Handle an incoming request.
+     * Save log in the activity log table
      *
      * @param Request $request
      * @param Closure $next
