@@ -2,6 +2,8 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -45,4 +47,27 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    // public function unauthenticated($request, AuthenticationException $exception)
+    // {
+    //     // Return a JSON response for API requests
+    //     if ($request->expectsJson()) {
+    //         return response()->json(['message' => 'Unauthorized. Please provide a valid token.'], 401);
+    //     }
+
+    //     // For web requests, you may want to redirect to the login page (optional)
+    //     return redirect()->guest(route('login'));
+    // }
+
+    public function render($request, Throwable $exception)
+{
+    // Handle AuthorizationException
+    if ($exception instanceof AuthorizationException) {
+        return response()->json([
+            'message' => 'This action is unauthorized.'
+        ], 403);
+    }
+
+    return parent::render($request, $exception);
+}
 }
