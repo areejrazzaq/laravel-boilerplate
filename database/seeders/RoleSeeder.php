@@ -15,7 +15,7 @@ class RoleSeeder extends Seeder
     {
         DB::table("roles")->insertOrIgnore([
             ["name"=>'admin',"guard_name"=>'api'],
-            ["name"=>'moderator',"guard_name"=>'api'],
+            ["name"=>'realtor',"guard_name"=>'api'],
         ]
         );
     }
