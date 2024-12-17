@@ -2,9 +2,9 @@
 1. Run command "composer install"
 2. Create .env file and update DB host.
 3. Generate application key "php artisan key:generate"
-4. Generate passport keys "php artisan passport:install"
-5. Add the generated PASSPORT_PRIVATE_KEY and PASSPORT_PUBLIC_KEY (under storage folder ) in .env file
-6. Run command "php artisan migrate"
+4. Run command "php artisan migrate"
+5. Generate passport keys "php artisan passport:install"
+6. Add the generated PASSPORT_PRIVATE_KEY and PASSPORT_PUBLIC_KEY (under storage folder ) in .env file
 7. Modify RoleSeeder class as per needs
 8. Run "php artisan db:seed RoleSeeder"
 

@@ -46,7 +46,7 @@ class LoggerMiddleware
         // if you want to log all the request body
         if (count($request->all()) > 0) {
             // keys to skip like password or any sensitive information
-            $hiddenKeys = ['password'];
+            $hiddenKeys = ['password','password_confirmation'];
 
             $data['request'] = json_encode($request->except($hiddenKeys));
         }

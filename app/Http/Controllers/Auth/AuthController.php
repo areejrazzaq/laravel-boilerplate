@@ -58,8 +58,7 @@ class AuthController extends AppBaseController
     public function logout(): JsonResponse
     {
         try {
-
-            Auth::logout();
+            auth()->user()->token()->revoke();
             return $this->sendSuccess('User logged out successfully.');
         } catch (Exception $e) {
             return $this->sendError('Error while logging out.');
